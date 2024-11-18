@@ -23,7 +23,6 @@ builder.Services
     .ModifyRequestOptions(
         options => options.IncludeExceptionDetails = builder.Environment.IsDevelopment())
     .AddGlobalObjectIdentification()
-    .RegisterDbContext<ApplicationDbContext>(DbContextKind.Pooled)
     // Set default type for the User entity.
     .AddType<UserType>()
     .AddApplicationTypes()
